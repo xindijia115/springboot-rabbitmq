@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.HashMap;
 
 /**
- * 配置文件类代码
+ * 配置文件类代码,队列设置过期时间
  * @author xia
  * @since 2023/12/28/22:52
  */
