@@ -12,6 +12,7 @@ import java.util.HashMap;
 
 /**
  * 使用插件实现延迟队列
+ *
  * @author xia
  * @since 2023/12/30/20:12
  */
@@ -36,9 +37,9 @@ public class DelayedQueueConfig {
     }
 
     //绑定
-    @Bean
-    public Binding queueBinding(@Qualifier("delayedQueue") Queue queue, @Qualifier("delayedExchange") CustomExchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with(DELAYED_ROUTING_KEY).noargs();
-    }
+//    @Bean
+//    public Binding queueBinding(@Qualifier("delayedQueue") Queue queue, @Qualifier("delayedExchange") CustomExchange exchange) {
+//        return BindingBuilder.bind(queue).to(exchange).with(DELAYED_ROUTING_KEY).noargs();
+//    }
 
 }

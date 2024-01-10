@@ -5,6 +5,12 @@ spring:
     port: 5672
     username: admin
     password: admin123456
+    publisher-confirm-type: correlated
+    #针对交换机
+    #NONE 表示禁用发布确认模式，默认 correlated表示 成功发布消息到交换机后会触发回调方法  simple 一方面的效果和correlated一样 另一方面可能会导致channel关闭
+    publisher-returns: true
+    #针对消息队列
+    #回退消息，当交换机不可以叫消息发送到队列中时，也就是不可路由时，采用消息回退，会退给消息生产者
 
 
 
